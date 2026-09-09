@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "<b>Merkpol</b> SAS",
+        "subtitulo": "Soluciones Integrales para tu Empresa",
+        "descripcion": "Bienvenidos a Merkpol SAS. Ofrecemos los mejores productos y servicios de alta calidad adaptados a las necesidades industriales de nuestros clientes.",
+        "imagen": "./assets/img/banner_img_01.jpg"
+    },
+    {
+        "titulo": "Productos Premium",
+        "subtitulo": "Calidad y Durabilidad Garantizada",
+        "descripcion": "Explora nuestro catálogo con la última tecnología y materiales resistentes para optimizar el rendimiento de tu negocio.",
+        "imagen": "./assets/img/banner_img_02.jpg"
+    },
+    {
+        "titulo": "Soporte Técnico",
+        "subtitulo": "Atención personalizada las 24 horas",
+        "descripcion": "Contamos con un equipo de profesionales listos para ayudarte en cualquier momento. Tu tranquilidad es nuestra prioridad.",
+        "imagen": "./assets/img/banner_img_03.jpg"
+    }
+]
