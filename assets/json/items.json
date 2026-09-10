@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "titulo": "Paraguas",
+    "subtitulo": "Paraguas de alta calidad",
+    "imagen": "/assets/img/shop_01.jpg",
+    "descripcion": "Paraguas resistente y duradero, ideal para días lluviosos."
+  },
+  {
+    "id": 2,
+    "titulo": "Camiseta",
+    "subtitulo": "Camiseta de algodón 100%",
+    "imagen": "/assets/img/shop_02.jpg",
+    "descripcion": "Camiseta cómoda y transpirable, perfecta para días calurosos."
+  },
+  {
+    "id": 3,
+    "titulo": "Nuevo Producto",
+    "subtitulo": "Producto nuevo y emocionante",
+    "imagen": "/assets/img/shop_03.jpg",
+    "descripcion": "Producto de alta calidad, ideal para cualquier ocasión."
+  },
+  {
+    "id": 4,
+    "titulo": "Paraguas",
+    "subtitulo": "Paraguas de alta calidad",
+    "imagen": "/assets/img/shop_01.jpg",
+    "descripcion": "Paraguas resistente y duradero, ideal para días lluviosos."
+  },
+  {
+    "id": 5,
+    "titulo": "Camiseta",
+    "subtitulo": "Camiseta de algodón 100%",
+    "imagen": "/assets/img/shop_02.jpg",
+    "descripcion": "Camiseta cómoda y transpirable, perfecta para días calurosos."
+  },
+  {
+    "id": 6,
+    "titulo": "Nuevo Producto",
+    "subtitulo": "Producto nuevo y emocionante",
+    "imagen": "/assets/img/shop_03.jpg",
+    "descripcion": "Producto de alta calidad, ideal para cualquier ocasión."
+  },
+  {
+    "id": 7,
+    "titulo": "Paraguas",
+    "subtitulo": "Paraguas de alta calidad",
+    "imagen": "/assets/img/shop_01.jpg",
+    "descripcion": "Paraguas resistente y duradero, ideal para días lluviosos."
+  },
+  {
+    "id": 8,
+    "titulo": "Camiseta",
+    "subtitulo": "Camiseta de algodón 100%",
+    "imagen": "/assets/img/shop_02.jpg",
+    "descripcion": "Camiseta cómoda y transpirable, perfecta para días calurosos."
+  },
+  {
+    "id": 9,
+    "titulo": "Nuevo Producto",
+    "subtitulo": "Producto nuevo y emocionante",
+    "imagen": "/assets/img/shop_03.jpg",
+    "descripcion": "Producto de alta calidad, ideal para cualquier ocasión."
+  },
+    {
+    "id": 10,
+    "titulo": "Paraguas",
+    "subtitulo": "Paraguas de alta calidad",
+    "imagen": "/assets/img/shop_01.jpg",
+    "descripcion": "Paraguas resistente y duradero, ideal para días lluviosos."
+  },
+  {
+    "id": 11,
+    "titulo": "Camiseta",
+    "subtitulo": "Camiseta de algodón 100%",
+    "imagen": "/assets/img/shop_02.jpg",
+    "descripcion": "Camiseta cómoda y transpirable, perfecta para días calurosos."
+  },
+  {
+    "id": 12,
+    "titulo": "Nuevo Producto",
+    "subtitulo": "Producto nuevo y emocionante",
+    "imagen": "/assets/img/shop_03.jpg",
+    "descripcion": "Producto de alta calidad, ideal para cualquier ocasión."
+  }
+]
