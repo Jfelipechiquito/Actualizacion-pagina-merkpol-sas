@@ -60,9 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error cargando el carrusel:", error));
 });
 
-document
-  .getElementById("subscribeForm")
-  .addEventListener("submit", function (event) {
+// formulario de suscripción
+const form = document.getElementById("subscribeForm");
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    document.getElementById("subscribeForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Evita que la página se recargue o redirija
 
     const statusDiv = document.getElementById("formStatus");
@@ -92,3 +95,78 @@ document
         statusDiv.innerText = "Error de conexión. Inténtalo más tarde.";
       });
   });
+  });
+}
+
+
+  let paginaActual = 1;
+const productosPorPagina = 9;
+let listaProductos = [];
+
+async function cargarBanners() {
+  const contenedor = document.getElementById("contenedor-banners");
+  if (!contenedor) return;
+
+  try {
+    const respuesta = await fetch("/assets/json/items.json");
+    listaProductos = await respuesta.json();
+
+    renderizarPagina(paginaActual);
+  } catch (error) {
+    console.error("Error al cargar los datos:", error);
+  }
+}
+
+function renderizarPagina(pagina) {
+  paginaActual = pagina;
+  const contenedor = document.getElementById("contenedor-banners");
+  
+  // Calcular los índices de inicio y fin para los 9 ítems
+  const inicio = (pagina - 1) * productosPorPagina;
+  const fin = inicio + productosPorPagina;
+  const productosPagina = listaProductos.slice(inicio, fin);
+
+  // Cada tarjeta utiliza col-md-4 y col-lg-4 para asegurar 3 elementos por fila
+  contenedor.innerHTML = productosPagina.map(item => `
+    <div class="col-md-4 col-lg-4 mb-4">
+      <div class="card h-100 product-wap rounded-0">
+        <div class="card rounded-0">
+          <img class="card-img rounded-0 img-fluid" src="${item.imagen}" alt="${item.titulo}">
+          <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center"></div>
+        </div>
+        <div class="card-body">
+          <a href="#" class="h3 text-decoration-none">${item.titulo}</a>
+          <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+            <li>${item.subtitulo}</li>
+          </ul>
+          <p class="text-center mb-0">${item.descripcion}</p>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  renderizarPaginacion();
+}
+
+function renderizarPaginacion() {
+  const contenedorPaginacion = document.getElementById("contenedor-paginacion");
+  if (!contenedorPaginacion) return;
+
+  const totalPaginas = Math.ceil(listaProductos.length / productosPorPagina);
+  let htmlPaginacion = "";
+
+  for (let i = 1; i <= totalPaginas; i++) {
+    htmlPaginacion += `
+      <li class="page-item ${i === paginaActual ? 'active' : ''}">
+        <button class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 ${i === paginaActual ? '' : 'text-dark'}" 
+                onclick="renderizarPagina(${i})">
+          ${i}
+        </button>
+      </li>
+    `;
+  }
+
+  contenedorPaginacion.innerHTML = htmlPaginacion;
+}
+
+document.addEventListener("DOMContentLoaded", cargarBanners);
