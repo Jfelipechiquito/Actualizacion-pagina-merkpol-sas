@@ -65,41 +65,42 @@ const form = document.getElementById("subscribeForm");
 if (form) {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    document.getElementById("subscribeForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita que la página se recargue o redirija
+    document
+      .getElementById("subscribeForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que la página se recargue o redirija
 
-    const statusDiv = document.getElementById("formStatus");
-    const formData = new FormData(this);
+        const statusDiv = document.getElementById("formStatus");
+        const formData = new FormData(this);
 
-    // Mostramos un mensaje de carga
-    statusDiv.style.display = "block";
-    statusDiv.innerText = "Enviando...";
+        // Mostramos un mensaje de carga
+        statusDiv.style.display = "block";
+        statusDiv.innerText = "Enviando...";
 
-    // Enviamos los datos en segundo plano a FormSubmit
-    fetch("https://formsubmit.co", {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          statusDiv.innerText = "¡Gracias! Te has suscrito correctamente.";
-          this.reset(); // Limpia el campo de texto
-        } else {
-          statusDiv.innerText = "Hubo un error. Inténtalo de nuevo.";
-        }
-      })
-      .catch((error) => {
-        statusDiv.innerText = "Error de conexión. Inténtalo más tarde.";
+        // Enviamos los datos en segundo plano a FormSubmit
+        fetch("https://formsubmit.co", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              statusDiv.innerText = "¡Gracias! Te has suscrito correctamente.";
+              this.reset(); // Limpia el campo de texto
+            } else {
+              statusDiv.innerText = "Hubo un error. Inténtalo de nuevo.";
+            }
+          })
+          .catch((error) => {
+            statusDiv.innerText = "Error de conexión. Inténtalo más tarde.";
+          });
       });
-  });
   });
 }
 
-
-  let paginaActual = 1;
+let paginaActual = 1;
 const productosPorPagina = 9;
 let listaProductos = [];
 
@@ -120,14 +121,16 @@ async function cargarBanners() {
 function renderizarPagina(pagina) {
   paginaActual = pagina;
   const contenedor = document.getElementById("contenedor-banners");
-  
+
   // Calcular los índices de inicio y fin para los 9 ítems
   const inicio = (pagina - 1) * productosPorPagina;
   const fin = inicio + productosPorPagina;
   const productosPagina = listaProductos.slice(inicio, fin);
 
   // Cada tarjeta utiliza col-md-4 y col-lg-4 para asegurar 3 elementos por fila
-  contenedor.innerHTML = productosPagina.map(item => `
+  contenedor.innerHTML = productosPagina
+    .map(
+      (item) => `
     <div class="col-md-4 col-lg-4 mb-4">
       <div class="card h-100 product-wap rounded-0">
         <div class="card rounded-0">
@@ -143,7 +146,9 @@ function renderizarPagina(pagina) {
         </div>
       </div>
     </div>
-  `).join('');
+  `,
+    )
+    .join("");
 
   renderizarPaginacion();
 }
@@ -157,8 +162,8 @@ function renderizarPaginacion() {
 
   for (let i = 1; i <= totalPaginas; i++) {
     htmlPaginacion += `
-      <li class="page-item ${i === paginaActual ? 'active' : ''}">
-        <button class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 ${i === paginaActual ? '' : 'text-dark'}" 
+      <li class="page-item ${i === paginaActual ? "active" : ""}">
+        <button class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 ${i === paginaActual ? "" : "text-dark"}" 
                 onclick="renderizarPagina(${i})">
           ${i}
         </button>
