@@ -11,9 +11,13 @@
       type="image/x-icon"
       href="assets/img/logoMerkpol1.png"
     />
-    <link rel="stylesheet" href="assets/css/custom.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nosifer&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/custom.css" />
+      <link rel="stylesheet" href="assets/css/custom.css" />
+      <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-
   <body>
     <!-- // Include the navigation bar from navBar.html -->
     <div id="navbar-container"></div>
@@ -65,46 +69,66 @@
     <!-- End Banner Hero -->
 
     <!-- Start Categories of The Month -->
-    <section class="container py-5">
-      <div class="row text-center pt-3">
+ <section class="container py-5">
+    <div class="row text-center pt-3 pb-4">
         <div class="col-lg-6 m-auto">
-          <h1 class="h1">Categories of The Month</h1>
-          <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+          <h2 class="h1 fw-bold text-dark">Categorías Destacadas</h2>
+          <p class="text-muted">
+            Explora nuestras colecciones especiales y lo más nuevo que tenemos preparado para ti en Merkpol SAS.
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#"
-            ><img
-              src="./assets/img/category_img_01.jpg"
-              class="rounded-circle img-fluid border"
-          /></a>
-          <h5 class="text-center mt-3 mb-3">Watches</h5>
-          <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Categoría 1: Halloween -->
+        <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 text-center category-card h-100 bg-white">
+                <div class="category-img-container mb-3 border shadow-sm">
+                    <a href="products.html?cat=halloween">
+                        <img src="./assets/img/category_img_01.jpg" alt="Merchandising de Halloween">
+                    </a>
+                </div>
+                <div class="card-body px-0 pb-0">
+                    <h3 class="h4 fw-bold text-dark mb-3">HALLOWEEN</h3>
+                    <p class="text-muted small mb-4">Ediciones espeluznantes y coleccionables por tiempo limitado.</p>
+                    <a href="products.html?cat=halloween" class="btn text-white px-4 rounded-pill fw-semibold" style="background-color: #F47B3A;">Ver Colección</a>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#"
-            ><img
-              src="./assets/img/category_img_02.jpg"
-              class="rounded-circle img-fluid border"
-          /></a>
-          <h2 class="h5 text-center mt-3 mb-3">Shoes</h2>
-          <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+
+        <!-- Categoría 2: Christmas -->
+        <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 text-center category-card h-100 bg-white">
+                <div class="category-img-container mb-3 border shadow-sm">
+                    <a href="products.html?cat=christmas">
+                        <img src="./assets/img/category_img_02.jpg" alt="Merchandising de Navidad">
+                    </a>
+                </div>
+                <div class="card-body px-0 pb-0">
+                    <h3 class="h4 fw-bold text-dark mb-3">Christmas</h3>
+                    <p class="text-muted small mb-4">Sorprende a todos con los mejores detalles de temporada navideña.</p>
+                    <a href="products.html?cat=christmas" class="btn text-white px-4 rounded-pill fw-semibold" style="background-color: #F47B3A;">Ver Colección</a>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#"
-            ><img
-              src="./assets/img/category_img_03.jpg"
-              class="rounded-circle img-fluid border"
-          /></a>
-          <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-          <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+
+        <!-- Categoría 3: New Products -->
+        <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 text-center category-card h-100 bg-white">
+                <div class="category-img-container mb-3 border shadow-sm">
+                    <a href="products.html?cat=new-products">
+                        <img src="./assets/img/category_img_03.jpg" alt="Nuevos Productos">
+                    </a>
+                </div>
+                <div class="card-body px-0 pb-0">
+                    <h3 class="h4 fw-bold text-dark mb-3">New Products</h3>
+                    <p class="text-muted small mb-4">Lo más fresco y reciente que acaba de llegar a nuestra tienda.</p>
+                    <a href="products.html?cat=new-products" class="btn text-white px-4 rounded-pill fw-semibold" style="background-color: #F47B3A;">Ver Novedades</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
     <!-- End Categories of The Month -->
 
     <!-- Start Featured Product -->

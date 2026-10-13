@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nosifer&display=swap');
+.body {
+    background-color: #0f0f11; /* Un negro/gris muy oscuro, menos cansado que el negro puro */
+    color: #f8f9fa; /* Letras claras para que se lea bien */
+}
+.category-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* .category-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
+    } */
+    .category-card:hover {
+    transform: translateY(-8px);
+    /* Sombra difusa color naranja corporativo para dar efecto místico */
+    box-shadow: 0 1rem 3rem rgba(244, 123, 58, 0.25) !important;
+    border: 1px solid rgba(244, 123, 58, 0.4);
+}
+    .category-img-container {
+        overflow: hidden;
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+    .category-img-container img {
+        transition: transform 0.5s ease;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .category-card:hover .category-img-container .img {
+        transform: scale(1.1);
+    }
+.nosifer-regular {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.henny-penny-regular {
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.mountains-of-christmas-regular {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mountains-of-christmas-bold {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.h1, .h2, .h3,.navbar-brand, .h1, .h4{
+    font-family: "Nosifer", system-ui !important;
+}
+.halloween-title {
+    font-family: "Nosifer", sans-serif !important;
+    color: #F47B3A;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* style navbar */
+
+/* --- ESTILO DE HALLOWEEN PARA LA BARRA DE NAVEGACIÓN --- */
+
+/* 1. Fondo oscuro elegante y borde inferior con tu naranja corporativo (#F47B3A) */
+.navbar {
+    background-color: #121214 !important;
+    border-bottom: 2px solid #F47B3A !important;
+}
+
+/* 2. Color blanco para los textos del menú (Home, About, Products, Contact) */
+.navbar .navbar-nav .nav-link {
+    color: #f8f9fa !important;
+    transition: color 0.3s ease;
+}
+
+/* 3. Efecto al pasar el cursor sobre los enlaces del menú (se ponen de tu color naranja) */
+.navbar .navbar-nav .nav-link:hover {
+    color: #F47B3A !important;
+}
+
+/* 4. Cambiar el color de los iconos de la derecha (lupa de búsqueda y carrito) a blanco para que resalten */
+.navbar .nav-icon i {
+    color: #f8f9fa !important;
+    transition: color 0.3s ease;
+}
+
+/* 5. Efecto al pasar el cursor sobre los iconos de la derecha */
+.navbar .nav-icon i:hover {
+    color: #F47B3A !important;
+}
+
+/* 6. Estilo para el menú desplegable (Dropdown) de Products para que combine con el fondo oscuro */
+.dropdown-menu {
+    background-color: #1a1a1d !important;
+    border: 1px solid rgba(244, 123, 58, 0.3) !important;
+}
+
+.dropdown-item {
+    color: #f8f9fa !important;
+}
+
+.dropdown-item:hover {
+    background-color: #F47B3A !important;
+    color: #ffffff !important;
+}
+
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
